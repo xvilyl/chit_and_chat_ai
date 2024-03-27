@@ -50,8 +50,8 @@ def main():
     # Create the Model - this step is adjusted as it's not necessary for OpenAI's usage pattern.
     # MethodClass.create_model()
 
-    recipient = st.radio("Select the recipient:", ("Friend", "Family", "Formal", "Informal"))
-    message_type = st.radio("Message type:", ("Reply - post what they have sent to you with "" ", "Start Conversation - Be brave!!"))
+    recipient = st.radio("Select the recipient:", ("Friend", "Family", "Formal", "Stranger"))
+    message_type = st.radio("Message type:", ("Reply - post what they have sent to you with quote ", "Start Conversation - Be brave!!"))
     user_input = st.text_area("Enter message with details:")
 
     if st.button("Generate Message"):
