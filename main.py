@@ -34,7 +34,7 @@ class MethodClass:
     @staticmethod
     def generate_response(prompt):
         # Generate the response using the v1/chat/completions endpoint
-        response = genai.ChatCompletion.create(
+        response = genai.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": prompt}]
         )
