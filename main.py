@@ -51,8 +51,8 @@ def main():
     # MethodClass.create_model()
 
     recipient = st.radio("Select the recipient:", ("Friend", "Family", "Formal", "Informal"))
-    message_type = st.radio("Message type:", ("Reply - post what they have sent to you", "Start Conversation - Be brave!!"))
-    user_input = st.text_area("Enter your message:")
+    message_type = st.radio("Message type:", ("Reply - post what they have sent to you with "" ", "Start Conversation - Be brave!!"))
+    user_input = st.text_area("Enter message with details:")
 
     if st.button("Generate Message"):
         prompt = MethodClass.create_prompt(recipient, message_type, user_input)
